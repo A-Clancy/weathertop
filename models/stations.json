@@ -1,0 +1,33 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "title": "Kilkenny1",
+      "_id": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "title": "",
+      "_id": "fe878b23-be52-4b21-9b85-7c55e467580d"
+    },
+    {
+      "title": "Kilkenny1",
+      "_id": "f6856522-b31a-4fc9-bf6d-a43abb7cee6f"
+    },
+    {
+      "title": "Kilkenny2",
+      "_id": "9d085003-38e4-498f-a9e6-31c7d3d0215c"
+    },
+    {
+      "title": "",
+      "_id": "ba5bb296-0136-4dd3-a96e-ed6b2c302456"
+    },
+    {
+      "title": "Kilkenny3",
+      "_id": "925451fc-5802-4feb-985a-19b473f769dd"
+    },
+    {
+      "title": "Kilkenny4",
+      "_id": "64927859-698b-4fdb-b2bb-06b3754e1daf"
+    }
+  ]
+}
