@@ -9,5 +9,5 @@ router.get("/", dashboardController.index);
 router.get("/dashboard", dashboardController.index);
 router.post("/dashboard/addstation", dashboardController.addStation);
 router.get("/station/:id", stationController.index);
-router.post("/station/:id/addtrack", stationController.addTrack);
+router.post("/station/:id/addreport", stationController.addReport);
 router.get("/about", aboutController.index);

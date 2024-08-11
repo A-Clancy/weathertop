@@ -1,5 +1,5 @@
 import { stationStore } from "../models/station-store.js";
-import { trackStore } from "../models/track-store.js";
+import { reportStore } from "../models/report-store.js";
 
 export const stationController = {
   async index(request, response) {
@@ -11,15 +11,15 @@ export const stationController = {
     response.render("station-view", viewData);
   },
 
-  async addTrack(request, response) {
+  async addReport(request, response) {
     const station = await stationStore.getstationById(request.params.id);
-    const newTrack = {
+    const newReport = {
       title: request.body.title,
       artist: request.body.artist,
       duration: Number(request.body.duration),
     };
-    console.log(`adding track ${newTrack.title}`);
-    await trackStore.addTrack(station._id, newTrack);
+    console.log(`adding report ${newReport.title}`);
+    await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
 };
