@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
-import { trackStore } from "./track-store.js";
+import { reportStore } from "./report-store.js";
 
 const db = initStore("stations");
 
@@ -18,10 +18,10 @@ export const stationStore = {
     return station;
   },
 
-  async getstationById(id) {
+  async getStationById(id) {
     await db.read();
     const list = db.data.stations.find((station) => station._id === id);
-    list.tracks = await trackStore.getTracksByStationId(list._id);
+    list.reports = await reportStore.getReportsByStationId(list._id);
     return list;
   },
 
