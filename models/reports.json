@@ -1,1 +1,43 @@
-{"file":"./models/reports.json","reports":[]}
+{
+  "file": "./models/reports.json",
+  "reports": [
+    {
+      "duration": null,
+      "_id": "ac21b953-302c-4481-b02a-b57ae9bd6d13",
+      "stationid": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "duration": null,
+      "_id": "9c07bed0-6a87-458f-8f26-3142cbc36ade",
+      "stationid": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "duration": null,
+      "_id": "7d87d258-a025-495d-b1ff-f4f5b2db4774",
+      "stationid": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "duration": null,
+      "_id": "dac42437-37d2-4a02-a424-e310aab1d2aa",
+      "stationid": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "code": "10",
+      "temp": "",
+      "windSpeed": "",
+      "windDirection": "",
+      "pressure": "",
+      "_id": "de01a20d-e6f6-4078-935e-5c47772219a1",
+      "stationId": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "code": "10",
+      "temp": "20",
+      "windSpeed": "30",
+      "windDirection": "N",
+      "pressure": "1000",
+      "_id": "b413a68d-324b-4358-bf30-a5137f63b766",
+      "stationId": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    }
+  ]
+}
