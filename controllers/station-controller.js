@@ -12,14 +12,25 @@ export const stationController = {
   },
 
   async addReport(request, response) {
-    const station = await stationStore.getstationById(request.params.id);
+    const station = await stationStore.getStationById(request.params.id);
     const newReport = {
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration),
+      code: request.body.code,
+      temp: request.body.temp,
+      windSpeed: request.body.windSpeed,
+      windDirection: request.body.windDirection,
+      pressure: request.body.pressure,
     };
     console.log(`adding report ${newReport.title}`);
     await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
+  
+    async deleteReport(request, response) {
+    const stationId = request.params.stationId;
+    const reportId = request.params.reportId;
+    console.log(`Deleting Report ${reportId} from Station ${stationId}`);
+    await reportStore.deleteReport(request.params.reportId);
+    response.redirect("/station/" + stationId);
+  },
+  
 };

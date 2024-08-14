@@ -12,7 +12,7 @@ export const reportStore = {
   async addReport(stationId, report) {
     await db.read();
     report._id = v4();
-    report.stationid = stationId;
+    report.stationId = stationId;
     db.data.reports.push(report);
     await db.write();
     return report;
@@ -20,7 +20,7 @@ export const reportStore = {
 
   async getReportsByStationId(id) {
     await db.read();
-    return db.data.reports.filter((report) => report.stationid === id);
+    return db.data.reports.filter((report) => report.stationId === id);
   },
 
   async getReportById(id) {
@@ -41,9 +41,11 @@ export const reportStore = {
   },
 
   async updateReport(report, updatedReport) {
-    report.title = updatedReport.title;
-    report.artist = updatedReport.artist;
-    report.duration = updatedReport.duration;
+    report.code = updatedReport.code;
+    report.temp = updatedReport.temp;
+    report.windSpeed = updatedReport.windSpeed;
+    report.windDirection = updatedReport.windDirection;
+    report.pressure = updatedReport.pressure;
     await db.write();
   },
 };
