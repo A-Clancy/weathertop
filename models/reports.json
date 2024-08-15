@@ -38,6 +38,15 @@
       "pressure": "1000",
       "_id": "b413a68d-324b-4358-bf30-a5137f63b766",
       "stationId": "440ad5fa-c73f-4728-9114-1a0fc9c2d625"
+    },
+    {
+      "code": "10",
+      "temp": "100",
+      "windSpeed": "10",
+      "windDirection": "10",
+      "pressure": "1000",
+      "_id": "a01317f3-700c-45b3-9afc-a72dfa76ea85",
+      "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
     }
   ]
 }

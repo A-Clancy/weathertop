@@ -2,20 +2,19 @@ import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 
 export const dashboardController = {
-  async index(request, response) {
-    const viewData = {
-      title: "station Dashboard",
-      stations: await stationStore.getAllStations(),
-    };
-    console.log("dashboard rendering");
-    response.render("dashboard-view", viewData);
-  },
-  
     async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+    //stop "undefined" problems, verify user is logged in or send them to the home page. 
+     if (!loggedInUser) {
+      console.log("User not logged in");
+      response.redirect("/");  
+      return;  
+    }
+      
+      
     const viewData = {
       title: "Station Dashboard",
-      station: await stationStore.getStationsByUserId(loggedInUser._id),
+      stations: await stationStore.getStationsByUserId(loggedInUser._id),
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
@@ -23,18 +22,15 @@ export const dashboardController = {
   
     async addStation(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
+     if (!loggedInUser) {
+      console.log("User not logged in");
+      response.redirect("/");  
+      return;  
+    }  
+      
     const newStation = {
       title: request.body.title,
       userid: loggedInUser._id,
-    };
-    console.log(`adding station ${newStation.title}`);
-    await stationStore.addStation(newStation);
-    response.redirect("/dashboard");
-  },
-
-  async addStation(request, response) {
-    const newStation = {
-      title: request.body.title,
     };
     console.log(`adding station ${newStation.title}`);
     await stationStore.addStation(newStation);
