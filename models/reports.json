@@ -47,6 +47,24 @@
       "pressure": "1000",
       "_id": "a01317f3-700c-45b3-9afc-a72dfa76ea85",
       "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
+    },
+    {
+      "code": "10",
+      "temp": "1000",
+      "windSpeed": "100",
+      "windDirection": "10",
+      "pressure": "100",
+      "_id": "8185be26-d5e6-4217-80d3-5ea77faf5290",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "202",
+      "temp": "10",
+      "windSpeed": "",
+      "windDirection": "NE",
+      "pressure": "",
+      "_id": "de854558-5c07-45f1-8ec8-07e4d5911b63",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
     }
   ]
 }

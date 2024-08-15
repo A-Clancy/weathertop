@@ -27,12 +27,14 @@ export const dashboardController = {
       response.redirect("/");  
       return;  
     }  
-      
+      //create a new station. Data passed through from form on dashboard. 
     const newStation = {
       title: request.body.title,
       userid: loggedInUser._id,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
     };
-    console.log(`adding station ${newStation.title}`);
+    console.log(`adding station ${newStation.title} at (${newStation.latitude}, ${newStation.longitude}) `);
     await stationStore.addStation(newStation);
     response.redirect("/dashboard");
   },

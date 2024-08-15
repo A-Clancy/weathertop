@@ -1,23 +1,37 @@
+//user enters the weather report here
+
 <form class="box" action="/station/{{station._id}}/addreport" method="POST">
   <label>Enter Report Details:</label>
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Code" name="code">
+        <input class="input" type="number" step ="any" placeholder="Enter Code" name="code" min="200" max="804">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Temperature" name="temp">
+        <input class="input" type="number" placeholder="Enter Temperature" name="temp">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Speed" name="windSpeed">
+        <input class="input" type="number" placeholder="Enter Wind Speed" name="windSpeed">
       </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Wind Direction" name="windDirection">
+      <div class="select">
+        <select name="windDirection" required>
+          <option value="" disabled selected>Select Wind Direction</option>
+            <option value="N">North (N)</option>
+            <option value="NE">North-East (NE)</option>
+            <option value="E">East (E)</option>
+            <option value="SE">South-East (SE)</option>
+            <option value="S">South (S)</option>
+            <option value="SW">South-West (SW)</option>
+            <option value="W">West (W)</option>
+            <option value="NW">North-West (NW)</option>
+        </select>
       </div>
             <div class="field">
-        <input class="input" type="text" placeholder="Enter Pressure" name="pressure">
+        <input class="input" type="number" placeholder="Enter Pressure" name="pressure">
       </div>
     </div>
   </div>
   <button class="button is-primary">Add Report</button>
 </form>
+
+
