@@ -65,6 +65,15 @@
       "pressure": "",
       "_id": "de854558-5c07-45f1-8ec8-07e4d5911b63",
       "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "200",
+      "temp": "20",
+      "windSpeed": "100",
+      "windDirection": "N",
+      "pressure": "1000",
+      "_id": "676bd84a-f48b-4d8c-a810-e51282b8aee3",
+      "stationId": "fbe0ecd5-a1b9-4eb5-a605-9d9fe6dda3d2"
     }
   ]
 }
