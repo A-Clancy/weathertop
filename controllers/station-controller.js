@@ -1,9 +1,33 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import {reportAnalytics} from "../utils/analytics.js";
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
+    const reports = await reportStore.getReportsByStationId(station._id);
+    
+    const minTempReport = reportAnalytics.findMinTemp(reports);
+    const minTemp = minTempReport ? minTempReport.temp : null;
+    console.log("Minimum Temperature:", minTemp);
+    
+    const maxTempReport = reportAnalytics.findMaxTemp(reports);
+    const maxTemp = maxTempReport ? maxTempReport.temp : null;
+    console.log("Maximum temperature:", maxTemp);
+    
+    const minWindSpeedReport = reportAnalytics.findMinWindSpeed(reports);
+    console.log("Minimum wind speed:", minWindSpeedReport);
+
+    const maxWindSpeedReport = reportAnalytics.findMaxWindSpeed(reports);
+    console.log("Report with the maximum wind speed:", maxWindSpeedReport);
+
+    const minPressureReport = reportAnalytics.findMinPressure(reports);
+    console.log("Report with the minimum pressure:", minPressureReport);
+
+    const maxPressureReport = reportAnalytics.findMaxPressure(reports);
+    console.log("Report with the maximum pressure:", maxPressureReport);
+    
+    
     
     const stationCards = {
       card1: { title: 'Station Name', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/map-pin.png?v=1723842999382', imageAlt: 'Image 1', content: 'Content 1', time: '2024-08-16', formattedTime: 'Aug 16, 2024' },
