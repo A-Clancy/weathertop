@@ -1,12 +1,26 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import {reportAnalytics} from "../utils/analytics.js";
+import {getIconUrl, getWeatherDescription} from "../utils/weather-mapping.js";
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const reports = await reportStore.getReportsByStationId(station._id);
     
+     // Get the latest weather report
+    const mostRecentReport = reports.length > 0 ? reports[reports.length - 1] : null;
+     
+    // Get the latest weather code
+    const weatherCode = mostRecentReport ? mostRecentReport.code : null;
+    
+    // Add the corresonding image code to the end of the URL. 
+    const weatherIconUrl = getIconUrl(weatherCode);
+    const weatherDescription = getWeatherDescription(weatherCode);
+    
+    
+    //Get Max and Min reports
+    //Temperature
     const minTempReport = reportAnalytics.findMinTemp(reports);
     const minTemp = minTempReport ? minTempReport.temp : null;
     console.log("Minimum Temperature:", minTemp);
@@ -15,26 +29,32 @@ export const stationController = {
     const maxTemp = maxTempReport ? maxTempReport.temp : null;
     console.log("Maximum temperature:", maxTemp);
     
+    //Wind Speed
     const minWindSpeedReport = reportAnalytics.findMinWindSpeed(reports);
-    console.log("Minimum wind speed:", minWindSpeedReport);
+    const minWindSpeed = minWindSpeedReport ? minWindSpeedReport.windSpeed : null;
+    console.log("Minimum wind speed:", minWindSpeed);
 
     const maxWindSpeedReport = reportAnalytics.findMaxWindSpeed(reports);
-    console.log("Report with the maximum wind speed:", maxWindSpeedReport);
+    const maxWindSpeed = maxWindSpeedReport ? maxWindSpeedReport.windSpeed : null;
+    console.log("Report with the maximum wind speed:", maxWindSpeed);
 
+    //Pressure
     const minPressureReport = reportAnalytics.findMinPressure(reports);
-    console.log("Report with the minimum pressure:", minPressureReport);
+    const minPressure = minPressureReport ? minPressureReport.pressure : null;
+    console.log("Report with the minimum pressure:", minPressure);
 
     const maxPressureReport = reportAnalytics.findMaxPressure(reports);
-    console.log("Report with the maximum pressure:", maxPressureReport);
+    const maxPressure = maxPressureReport ? maxPressureReport.pressure : null;
+    console.log("Report with the maximum pressure:", maxPressure);
     
     
     
     const stationCards = {
-      card1: { title: 'Station Name', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/map-pin.png?v=1723842999382', imageAlt: 'Image 1', content: 'Content 1', time: '2024-08-16', formattedTime: 'Aug 16, 2024' },
-      card2: { title: 'Weather', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/gis--weather-map.svg?v=1723842998375', imageAlt: 'Image 2', content: 'Content 2', time: '2024-08-17', formattedTime: 'Aug 17, 2024' },
-      card3: { title: 'Temperature', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/oui--temperature.svg?v=1723842998686', imageAlt: 'Image 3', content: 'Content 3', time: '2024-08-18', formattedTime: 'Aug 18, 2024' },
-      card4: { title: 'Wind', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/wind.svg?v=1723843000196', imageAlt: 'Image 4', content: 'Content 4', time: '2024-08-19', formattedTime: 'Aug 19, 2024' },
-      card5: { title: 'Pressure', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/pressure.png?v=1723842999905', imageAlt: 'Image 5', content: 'Content 5', time: '2024-08-20', formattedTime: 'Aug 20, 2024' }
+      card1: { title: 'Station Name', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/map-pin.png?v=1723842999382', imageAlt: 'Image 1', content: station.title, time: '2024-08-16', formattedTime: 'Aug 16, 2024' },
+      card2: { title: 'Weather', imageSrc: weatherIconUrl, imageAlt: weatherDescription, content: weatherDescription, time: '2024-08-17', formattedTime: 'Aug 17, 2024' },
+      card3: { title: 'Temperature', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/oui--temperature.svg?v=1723842998686', imageAlt: 'Image 3', content: `Min Temp: ${minTemp}°C, Max Temp: ${maxTemp}°C`, time: '2024-08-18', formattedTime: 'Aug 18, 2024' },
+      card4: { title: 'Wind', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/wind.svg?v=1723843000196', imageAlt: 'Image 4', content: `Min Wind Speed: ${minWindSpeed} km/h, Max Wind Speed: ${maxWindSpeed} km/h`, time: '2024-08-19', formattedTime: 'Aug 19, 2024' },
+      card5: { title: 'Pressure', imageSrc: 'https://cdn.glitch.global/f9c193fb-b447-434e-98d7-fd3d3da20615/pressure.png?v=1723842999905', imageAlt: 'Image 5', content: `Min Pressure: ${minPressure} hPa, Max Pressure: ${maxPressure} hPa`, time: '2024-08-20', formattedTime: 'Aug 20, 2024' }
     };
     
     const viewData = {

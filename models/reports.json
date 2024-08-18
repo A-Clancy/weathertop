@@ -101,6 +101,24 @@
       "pressure": "1000",
       "_id": "e70e46a1-36c6-4c82-b052-74d29a5d1ebf",
       "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "400",
+      "temp": "11",
+      "windSpeed": "12",
+      "windDirection": "E",
+      "pressure": "1300",
+      "_id": "dc2b9581-75e8-474a-8a89-43849d22731d",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "500",
+      "temp": "12",
+      "windSpeed": "13",
+      "windDirection": "SE",
+      "pressure": "1340",
+      "_id": "5bfa15c1-0ab5-46c9-93e6-ef87f4e32089",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
     }
   ]
 }
