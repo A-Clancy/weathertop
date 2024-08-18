@@ -119,6 +119,35 @@
       "pressure": "1340",
       "_id": "5bfa15c1-0ab5-46c9-93e6-ef87f4e32089",
       "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "600",
+      "temp": "6",
+      "windSpeed": "30",
+      "windDirection": "E",
+      "pressure": "900",
+      "_id": "62079a40-6fb1-43a1-8823-2c623e85dde1",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "550",
+      "temp": "30",
+      "windSpeed": "20",
+      "windDirection": "E",
+      "pressure": "980",
+      "timestamp": "2024-08-18T17:53:36+01:00",
+      "_id": "a94aa5c8-630c-4e59-afdd-02e68ad6001f",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "501",
+      "temp": "2",
+      "windSpeed": "20",
+      "windDirection": "NE",
+      "pressure": "800",
+      "timestamp": "2024-08-18T18:10:23+01:00",
+      "_id": "a79ddfd5-92b9-42bc-a72a-83297c7474a1",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
     }
   ]
 }

@@ -10,11 +10,17 @@ export const dashboardController = {
       response.redirect("/");  
       return;  
     }
+    
+    //get the stations for the logged in user
+    let stations = await stationStore.getStationsByUserId(loggedInUser._id);
+    
+    //sort by title using js tool for comparing with respect to customs and conventions  
+    stations = stations.sort((a,b) => a.title.localeCompare(b.title));
       
       
     const viewData = {
       title: "Station Dashboard",
-      stations: await stationStore.getStationsByUserId(loggedInUser._id),
+      stations: stations,
     };
     console.log("dashboard rendering");
     response.render("dashboard-view", viewData);

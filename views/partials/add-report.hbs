@@ -1,4 +1,4 @@
-//user enters the weather report here
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.6/dayjs.min.js"></script>
 
 <form class="box" action="/station/{{station._id}}/addreport" method="POST">
   <label>Enter Report Details:</label>
@@ -29,9 +29,18 @@
             <div class="field">
         <input class="input" type="number" placeholder="Enter Pressure" name="pressure">
       </div>
+      <input type="hidden" name="timestamp" id="report-timestamp">
     </div>
   </div>
   <button class="button is-primary">Add Report</button>
 </form>
 
+<script>
+  //record the time and date the report is added. 
+  document.addEventListener('DOMContentLoaded', function() {
+    const timestampInput = document.getElementById('report-timestamp');
+    const now = dayjs().format(); // Get current time
+    timestampInput.value = now;  // Set value of the hidden input
+  });
+</script>
 

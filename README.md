@@ -10,12 +10,17 @@
 - [ ] Stop my comments displaying in the rendered version!
 - [x] Fix the icon mapping - review previous project. 
 - [x] review openweather for details on linking icons
-- [ ] fix the images in the cards. adjust the layout so the title is on top. 
+- [x] fix the images in the cards. adjust the layout so the title is on top. 
 - [ ] then move to current/most recent data
 - [ ] I should add data validation to the co-ords when adding a station
-- [ ] Fix the station name in the staion-controller to read the wather code outloook. 
+- [x] Fix the station name in the staion-controller to read the wather code outloook. 
 - [ ] Get a better image for the map pin
-- [ ]
-- [ ]
-- [ ]
+- [ ] Tidy up the text a bit
+- [ ] Run prettify on everything.
+- [ ] Allow users edit their personal details. 
+- [ ] being able to rename stations would be good. 
+- [x] List the stations in alphabetical order
+- [x] add a timestamp to the weather reports. 
+- [ ] Update the station controller (or somewhere else???) to take days.js and then format the report timestamps. 
+
 
