@@ -16,11 +16,14 @@
 - [x] Fix the station name in the staion-controller to read the wather code outloook. 
 - [ ] Get a better image for the map pin
 - [ ] Tidy up the text a bit
-- [ ] Run prettify on everything.
+- [x] Run prettify on everything.
 - [ ] Allow users edit their personal details. 
 - [ ] being able to rename stations would be good. 
 - [x] List the stations in alphabetical order
-- [x] add a timestamp to the weather reports. 
+- [x] Add a timestamp to the weather reports. 
 - [ ] Update the station controller (or somewhere else???) to take days.js and then format the report timestamps. 
-
-
+- [ ] Sort out the date and time display. 
+- [ ] Download a zipped archive from Gltich
+- [ ] How do I get users to edit their data?
+- [ ]
+- [ ] 

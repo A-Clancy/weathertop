@@ -108,7 +108,9 @@ export const stationController = {
       pressure: request.body.pressure,
       timestamp: request.body.timestamp,
     };
-    console.log(`adding report ${newReport.title}, Timestamp ${newReport.timestamp}`);
+    console.log(
+      `adding report ${newReport.title}, Timestamp ${newReport.timestamp}`
+    );
     await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
