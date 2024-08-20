@@ -1,5 +1,4 @@
 export const reportAnalytics = {
-  
   //Find min temperature
   findMinTemp(reports) {
     let minTempReport = null;
@@ -9,7 +8,7 @@ export const reportAnalytics = {
 
       for (let i = 1; i < reports.length; i++) {
         const currentTemp = parseFloat(reports[i].temp); // Convert temp to number
-      
+
         if (!isNaN(currentTemp) && currentTemp < minTemp) {
           minTempReport = reports[i];
           minTemp = currentTemp;
@@ -18,7 +17,7 @@ export const reportAnalytics = {
     }
     return minTempReport;
   },
-  
+
   //Find min temperature
   findMaxTemp(reports) {
     let maxTempReport = null;
@@ -38,8 +37,7 @@ export const reportAnalytics = {
     }
     return maxTempReport;
   },
-  
-  
+
   //Wind Speed
   //Mininimum wind speed
   findMinWindSpeed(reports) {
@@ -61,8 +59,8 @@ export const reportAnalytics = {
     return minWindReport;
   },
 
-    //max wind speed
-   findMaxWindSpeed(reports) {
+  //max wind speed
+  findMaxWindSpeed(reports) {
     let maxWindReport = null;
 
     if (reports.length > 0) {
@@ -81,7 +79,6 @@ export const reportAnalytics = {
     return maxWindReport;
   },
 
-  
   //pressure
   //min pressure
   findMinPressure(reports) {
@@ -102,7 +99,7 @@ export const reportAnalytics = {
     }
     return minPressureReport;
   },
-  
+
   //max pressure
   findMaxPressure(reports) {
     let maxPressureReport = null;

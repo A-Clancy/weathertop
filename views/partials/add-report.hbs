@@ -5,42 +5,63 @@
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
-        <input class="input" type="number" step ="any" placeholder="Enter Code" name="code" min="200" max="804">
+        <input
+          class="input"
+          type="number"
+          step="any"
+          placeholder="Enter Code"
+          name="code"
+          min="200"
+          max="804"
+        />
       </div>
       <div class="field">
-        <input class="input" type="number" placeholder="Enter Temperature" name="temp">
+        <input
+          class="input"
+          type="number"
+          placeholder="Enter Temperature"
+          name="temp"
+        />
       </div>
       <div class="field">
-        <input class="input" type="number" placeholder="Enter Wind Speed" name="windSpeed">
+        <input
+          class="input"
+          type="number"
+          placeholder="Enter Wind Speed"
+          name="windSpeed"
+        />
       </div>
       <div class="select">
         <select name="windDirection" required>
           <option value="" disabled selected>Select Wind Direction</option>
-            <option value="N">North (N)</option>
-            <option value="NE">North-East (NE)</option>
-            <option value="E">East (E)</option>
-            <option value="SE">South-East (SE)</option>
-            <option value="S">South (S)</option>
-            <option value="SW">South-West (SW)</option>
-            <option value="W">West (W)</option>
-            <option value="NW">North-West (NW)</option>
+          <option value="N">North (N)</option>
+          <option value="NE">North-East (NE)</option>
+          <option value="E">East (E)</option>
+          <option value="SE">South-East (SE)</option>
+          <option value="S">South (S)</option>
+          <option value="SW">South-West (SW)</option>
+          <option value="W">West (W)</option>
+          <option value="NW">North-West (NW)</option>
         </select>
       </div>
-            <div class="field">
-        <input class="input" type="number" placeholder="Enter Pressure" name="pressure">
+      <div class="field">
+        <input
+          class="input"
+          type="number"
+          placeholder="Enter Pressure"
+          name="pressure"
+        />
       </div>
-      <input type="hidden" name="timestamp" id="report-timestamp">
+      <input type="hidden" name="timestamp" id="report-timestamp" />
     </div>
   </div>
   <button class="button is-primary">Add Report</button>
 </form>
 
 <script>
-  //record the time and date the report is added. 
-  document.addEventListener('DOMContentLoaded', function() {
-    const timestampInput = document.getElementById('report-timestamp');
-    const now = dayjs().format(); // Get current time
-    timestampInput.value = now;  // Set value of the hidden input
-  });
+  //record the time and date the report is added.
+  document.addEventListener('DOMContentLoaded', function() { const
+  timestampInput = document.getElementById('report-timestamp'); const now =
+  dayjs().format(); // Get current time timestampInput.value = now; // Set value
+  of the hidden input });
 </script>
-

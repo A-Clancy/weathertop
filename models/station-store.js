@@ -9,7 +9,7 @@ export const stationStore = {
     await db.read();
     return db.data.stations;
   },
-  
+
   async getStationsByUserId(userid) {
     await db.read();
     return db.data.stations.filter((station) => station.userid === userid);
