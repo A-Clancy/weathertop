@@ -2,12 +2,22 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import { reportAnalytics } from "../utils/analytics.js";
 import { getIconUrl, getWeatherDescription } from "../utils/weather-mapping.js";
+import dayjs from 'dayjs';
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
     const reports = await reportStore.getReportsByStationId(station._id);
 
+     // Format timestamps
+      reports.forEach(report => {
+         if (report.timestamp) {
+        report.formattedTimestamp = dayjs(report.timestamp).format('DD/MM/YYYY HH:mm');
+      } else {
+        report.formattedTimestamp = 'Missgin'; // Troubleshoot missing timestamp
+      }
+      });
+    
     // Get the latest weather report
     const mostRecentReport =
       reports.length > 0 ? reports[reports.length - 1] : null;
@@ -108,13 +118,32 @@ export const stationController = {
       pressure: request.body.pressure,
       timestamp: request.body.timestamp,
     };
-    console.log(
-      `adding report ${newReport.title}, Timestamp ${newReport.timestamp}`
-    );
+    console.log(`Adding report with code: ${newReport.code}, Timestamp: ${newReport.timestamp}`);
     await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
-
+  
+  async editStationPage(request, response) {
+    const station = await stationStore.getStationById(request.params.id);
+    const viewData = {
+      title: "Edit Station Details",
+      station: station,
+    };
+    response.render("edit-station", viewData);
+    },
+  
+  async updateStation(request, response) {
+    const stationId = request.params.id;
+    const updatedStation = {
+      title: request.body.title,
+      latitude: request.body.latitude,
+      longitude: request.body.longitude,
+  };
+  await stationStore.updateStation(stationId, updatedStation);
+  response.redirect("/station/" + stationId);
+  },
+  
+  
   async deleteReport(request, response) {
     const stationId = request.params.stationId;
     const reportId = request.params.reportId;

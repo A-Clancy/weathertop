@@ -59,9 +59,11 @@
 </form>
 
 <script>
-  //record the time and date the report is added.
-  document.addEventListener('DOMContentLoaded', function() { const
-  timestampInput = document.getElementById('report-timestamp'); const now =
-  dayjs().format(); // Get current time timestampInput.value = now; // Set value
-  of the hidden input });
+  //Get the report time. 
+  document.addEventListener('DOMContentLoaded', function() {
+    const timestampInput = document.getElementById('report-timestamp');
+    const now = dayjs().format(); // Get current time
+    timestampInput.value = now; // Set value of the hidden input
+    console.log(`Timestamp set to: ${now}`); // Troubleshooting
+  });
 </script>
