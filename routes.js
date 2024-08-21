@@ -22,4 +22,5 @@ router.get("/station/:id", stationController.index);
 router.post("/station/:id/addReport", stationController.addReport);
 router.get("/about", aboutController.index);
 router.get("/station/:stationId/deleteReport/:reportId", stationController.deleteReport);
-
+router.get("/station/:id/edit", stationController.editStationPage);
+router.post("/station/:id/update", stationController.updateStation);

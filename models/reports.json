@@ -49,15 +49,6 @@
       "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
     },
     {
-      "code": "10",
-      "temp": "1000",
-      "windSpeed": "100",
-      "windDirection": "10",
-      "pressure": "100",
-      "_id": "8185be26-d5e6-4217-80d3-5ea77faf5290",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
       "code": "200",
       "temp": "20",
       "windSpeed": "100",
@@ -67,86 +58,63 @@
       "stationId": "fbe0ecd5-a1b9-4eb5-a605-9d9fe6dda3d2"
     },
     {
-      "code": "202",
-      "temp": "200",
-      "windSpeed": "200",
-      "windDirection": "NE",
-      "pressure": "200",
-      "_id": "0553c6ba-9efb-4fc9-95dd-4b6602bd7ecd",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "203",
-      "temp": "9",
-      "windSpeed": "23",
-      "windDirection": "W",
-      "pressure": "2000",
-      "_id": "f1bc8690-4119-49c8-9773-b34d6b196a50",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "300",
-      "temp": "11",
+      "code": "801",
+      "temp": "1",
       "windSpeed": "10",
       "windDirection": "W",
-      "pressure": "1000",
-      "_id": "f11e11b1-8e01-4274-bf0f-e742ee2e4dd2",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+      "pressure": "800",
+      "timestamp": "",
+      "_id": "ecb27309-2e95-4b60-a1f5-7b365bca1d17",
+      "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
     },
     {
-      "code": "300",
-      "temp": "10",
-      "windSpeed": "10",
-      "windDirection": "W",
-      "pressure": "1000",
-      "_id": "e70e46a1-36c6-4c82-b052-74d29a5d1ebf",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "400",
-      "temp": "11",
-      "windSpeed": "12",
-      "windDirection": "E",
-      "pressure": "1300",
-      "_id": "dc2b9581-75e8-474a-8a89-43849d22731d",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "500",
+      "code": "701",
       "temp": "12",
-      "windSpeed": "13",
-      "windDirection": "SE",
-      "pressure": "1340",
-      "_id": "5bfa15c1-0ab5-46c9-93e6-ef87f4e32089",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "600",
-      "temp": "6",
-      "windSpeed": "30",
-      "windDirection": "E",
-      "pressure": "900",
-      "_id": "62079a40-6fb1-43a1-8823-2c623e85dde1",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
-    },
-    {
-      "code": "550",
-      "temp": "30",
       "windSpeed": "20",
       "windDirection": "E",
-      "pressure": "980",
-      "timestamp": "2024-08-18T17:53:36+01:00",
-      "_id": "a94aa5c8-630c-4e59-afdd-02e68ad6001f",
-      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+      "pressure": "950",
+      "timestamp": "",
+      "_id": "c9178f37-5324-40e6-85fd-8dc49287aafb",
+      "stationId": "71736a13-504e-4c16-a9b0-9cf6ccd0aa51"
+    },
+    {
+      "code": "601",
+      "temp": "25",
+      "windSpeed": "25",
+      "windDirection": "E",
+      "pressure": "1050",
+      "timestamp": "",
+      "_id": "038e51f5-8297-48b0-aecc-bf62eb724371",
+      "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
     },
     {
       "code": "501",
-      "temp": "2",
+      "temp": "20",
       "windSpeed": "20",
-      "windDirection": "NE",
-      "pressure": "800",
-      "timestamp": "2024-08-18T18:10:23+01:00",
-      "_id": "a79ddfd5-92b9-42bc-a72a-83297c7474a1",
+      "windDirection": "E",
+      "pressure": "1000",
+      "timestamp": "",
+      "_id": "cf51c3da-eab4-487b-aa42-f629e28143de",
+      "stationId": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
+    },
+    {
+      "code": "401",
+      "temp": "4",
+      "windSpeed": "40",
+      "windDirection": "N",
+      "pressure": "1200",
+      "timestamp": "",
+      "_id": "2a883f6f-57e4-4a91-8859-6afe29cbca56",
+      "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+    },
+    {
+      "code": "301",
+      "temp": "3",
+      "windSpeed": "15",
+      "windDirection": "E",
+      "pressure": "1020",
+      "timestamp": "2024-08-21T19:39:07+01:00",
+      "_id": "c932299a-a8d6-4819-8ddf-0c1098558be9",
       "stationId": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
     }
   ]

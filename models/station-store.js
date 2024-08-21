@@ -29,6 +29,17 @@ export const stationStore = {
     list.reports = await reportStore.getReportsByStationId(list._id);
     return list;
   },
+  
+    async updateStation(id, updatedStation) {
+    await db.read();
+    const station = db.data.stations.find((station) => station._id === id);
+    if (station) {
+      station.title = updatedStation.title || station.title;
+      station.latitude = updatedStation.latitude || station.latitude;
+      station.longitude = updatedStation.longitude || station.longitude;
+      await db.write();
+    }
+  },
 
   async deleteStationById(id) {
     await db.read();

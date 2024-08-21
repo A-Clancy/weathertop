@@ -7,7 +7,7 @@
 - [x] create a partial to display the all time max/min icons in a nice format, use some bulma cards using utils above. https://bulma.io/documentation/components/card/ 
 - [ ] Move the card data to a partial too. Is this too many partials1?
 - [x] Fix the display code for the weather icons
-- [ ] Stop my comments displaying in the rendered version!
+- [x] Stop my comments displaying in the rendered version!
 - [x] Fix the icon mapping - review previous project. 
 - [x] review openweather for details on linking icons
 - [x] fix the images in the cards. adjust the layout so the title is on top. 
@@ -18,7 +18,7 @@
 - [ ] Tidy up the text a bit
 - [x] Run prettify on everything.
 - [ ] Allow users edit their personal details. 
-- [ ] being able to rename stations would be good. 
+- [x] being able to rename stations would be good. 
 - [x] List the stations in alphabetical order
 - [x] Add a timestamp to the weather reports. 
 - [ ] Update the station controller (or somewhere else???) to take days.js and then format the report timestamps. 
