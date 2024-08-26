@@ -38,4 +38,14 @@ export const userStore = {
     db.data.users = [];
     await db.write();
   },
+  
+  //update user details
+    async updateUser(id, updatedUser) {
+    await db.read();
+    const userIndex = db.data.users.findIndex((user) => user._id === id);
+    if (userIndex !== -1) {
+      db.data.users[userIndex] = updatedUser;
+      await db.write();
+    }
+  },
 };

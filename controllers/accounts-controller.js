@@ -49,4 +49,30 @@ export const accountsController = {
     const userEmail = request.cookies.weatherTop;
     return await userStore.getUserByEmail(userEmail);
   },
+  
+  //editing the user account details. 
+  async profile(request, response) {
+    const loggedInUser = await this.getLoggedInUser(request);
+    const viewData = {
+    title: "User Details",
+    user: loggedInUser,
+    active: "profile"
+    };
+    response.render("profile-view", viewData);
+  },
+
+  // UPdate the details. 
+  async updateProfile(request, response) {
+    const loggedInUser = await this.getLoggedInUser(request);
+    const updatedUser = request.body;
+
+    loggedInUser.firstName = updatedUser.firstName;
+    loggedInUser.lastName = updatedUser.lastName;
+    loggedInUser.email = updatedUser.email;
+    loggedInUser.password = updatedUser.password;
+
+    await userStore.updateUser(loggedInUser._id, loggedInUser);
+    response.redirect("/profile");
+  },
 };
+      
