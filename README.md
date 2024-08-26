@@ -17,13 +17,13 @@
 - [ ] Get a better image for the map pin
 - [ ] Tidy up the text a bit
 - [x] Run prettify on everything.
-- [ ] Allow users edit their personal details. 
+- [X] Allow users edit their personal details. 
 - [x] being able to rename stations would be good. 
 - [x] List the stations in alphabetical order
 - [x] Add a timestamp to the weather reports. 
-- [ ] Update the station controller (or somewhere else???) to take days.js and then format the report timestamps. 
+- [X] Update the station controller (or somewhere else???) to take days.js and then format the report timestamps. 
 - [ ] Sort out the date and time display. 
 - [ ] Download a zipped archive from Gltich
-- [ ] How do I get users to edit their data?
+- [X] How do I get users to edit their data?
 - [ ]
 - [ ] 
