@@ -1,0 +1,42 @@
+{{> menu active="live"}}
+
+<section class="box has-text-centered">
+  <h3 class="is-3 title">Live Weather Readings</h3>
+
+  <div class="section">
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Temperature</th>
+          <th>Wind Speed</th>
+          <th>Pressure</th>
+          <th>Description</th>
+          <th>Timestamp</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each reports}}
+        <tr>
+          <td>{{this.temperature}}</td>
+          <td>{{this.windSpeed}}</td>
+          <td>{{this.pressure}}</td>
+          <td>{{this.description}}</td>
+          <td>{{this.timestamp}}</td>
+          <td>
+            <a href="/live/deleteReport/{{this.id}}" class="button is-danger is-small">Delete</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <section class="section">
+    <form action="/live/addreport" method="POST">
+      <div class="field is-grouped">
+        <button class="button is-link">Add Reading</button>
+      </div>
+    </form>
+  </section>
+</section>

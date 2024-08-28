@@ -3,6 +3,7 @@ import { accountsController } from './controllers/accounts-controller.js';
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { stationController } from "./controllers/station-controller.js";
 import { aboutController } from "./controllers/about-controller.js";
+import { liveController } from "./controllers/live-controller.js";
 
 export const router = express.Router();
 
@@ -26,3 +27,8 @@ router.get("/station/:id/edit", stationController.editStationPage);
 router.post("/station/:id/update", stationController.updateStation);
 router.get("/profile", accountsController.profile);
 router.post("/updateProfile", accountsController.updateProfile);
+
+//make sure these work later
+router.get("/live", liveController.index); // To view live reports
+router.post("/live/addreport", liveController.addReport); // To add a new report
+router.get("/live/deleteReport/:id", liveController.deleteReport); // To delete a report
