@@ -42,37 +42,31 @@
       "_id": "f1b837aa-c972-4bd4-a704-8fff3f617509"
     },
     {
-      "title": "Alan5",
+      "title": "Malin Head",
       "userid": "225273cf-65b7-4812-ace1-9f42280fda5b",
-      "_id": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5"
+      "_id": "93eae5d0-e3d8-43a0-b176-04e6fea9fef5",
+      "latitude": "55.3726° N",
+      "longitude": "-7.3390° W"
     },
     {
-      "title": "Alan 6",
-      "userid": "225273cf-65b7-4812-ace1-9f42280fda5b",
-      "_id": "fbe0ecd5-a1b9-4eb5-a605-9d9fe6dda3d2"
-    },
-    {
-      "title": "Liam1",
+      "title": "Erris Head",
       "userid": "97739d39-2dd4-49e8-afca-45eb1172ecc9",
-      "_id": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8"
+      "_id": "3db087e4-ce9e-4d27-af98-d1e8bb9fa3f8",
+      "latitude": "54°18′05″N",
+      "longitude": "9°59′50″W"
     },
     {
-      "title": "Liam21",
+      "title": "Carnsore Point",
       "userid": "97739d39-2dd4-49e8-afca-45eb1172ecc9",
-      "_id": "71736a13-504e-4c16-a9b0-9cf6ccd0aa51"
+      "_id": "71736a13-504e-4c16-a9b0-9cf6ccd0aa51",
+      "latitude": "52°10′14″N",
+      "longitude": "6°21′20″W"
     },
     {
-      "title": "Alan 7",
+      "title": "Mizen Head",
       "userid": "225273cf-65b7-4812-ace1-9f42280fda5b",
-      "latitude": "-9.1",
-      "longitude": "10",
-      "_id": "b5151996-30e4-429e-9c2e-cae9cccff117"
-    },
-    {
-      "title": "Alan8",
-      "userid": "225273cf-65b7-4812-ace1-9f42280fda5b",
-      "latitude": "10",
-      "longitude": "100",
+      "latitude": "51.4500° N",
+      "longitude": "-9.8000° W",
       "_id": "24156d23-bed3-4e39-a55a-3a00a7623316"
     }
   ]

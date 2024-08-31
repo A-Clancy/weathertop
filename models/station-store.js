@@ -29,8 +29,8 @@ export const stationStore = {
     list.reports = await reportStore.getReportsByStationId(list._id);
     return list;
   },
-  
-    async updateStation(id, updatedStation) {
+
+  async updateStation(id, updatedStation) {
     await db.read();
     const station = db.data.stations.find((station) => station._id === id);
     if (station) {

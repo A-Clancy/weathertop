@@ -1,7 +1,7 @@
 import { liveStore } from "../models/live-store.js";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=c1d32b9ca2301f2be81a55357932fb0c`
+const weatherRequestUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tramore,Ireland&units=metric&appid=c1d32b9ca2301f2be81a55357932fb0c`;
 
 export const liveController = {
   index(request, response) {
@@ -12,7 +12,7 @@ export const liveController = {
     response.render("live-view", viewData);
   },
 
-  //need to figure out how to connect this to the API later. 
+  //need to figure out how to connect this to the API later.
   async addReport(request, response) {
     // Is this working???
     const result = await axios.get(weatherRequestUrl);

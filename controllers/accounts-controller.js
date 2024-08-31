@@ -50,8 +50,8 @@ export const accountsController = {
     return await userStore.getUserByEmail(userEmail);
   },
 
-  profile: async function(request, response) {
-    const loggedInUser = await accountsController.getLoggedInUser(request); 
+  profile: async function (request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     const viewData = {
       title: "User Details",
       user: loggedInUser,
@@ -60,8 +60,8 @@ export const accountsController = {
     response.render("profile-view", viewData);
   },
 
-  updateProfile: async function(request, response) {
-    const loggedInUser = await accountsController.getLoggedInUser(request);  
+  updateProfile: async function (request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     const updatedUser = request.body;
 
     loggedInUser.firstName = updatedUser.firstName;
